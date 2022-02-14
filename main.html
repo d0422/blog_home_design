@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Playfair+Display:wght@400;800&family=Quintessential&display=swap" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <title>Blog main screen</title>
+    </head>
+    <body>
+        <div id="box">
+            <div id="study" onmouseenter="addcontent('study')">
+                <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80">
+                    <div id="study_img">
+                        <div>
+                            <center><img src="study.png" width ="100" height="100"></center>
+                        </div>
+                        <center><div>STUDY</div></center>
+                    </div>
+                    
+                </a>
+            </div>
+            <div id="stock" onmouseenter="addcontent('stock')">
+                <a href="https://0422.tistory.com/category/%EC%A3%BC%EC%8B%9D%2C%20%ED%88%AC%EC%9E%90">
+                    <div id="stock_img">
+                        <div>
+                        <center><img src="stock.png" width ="90" height="90"></center>
+                        </div>
+                        <center><div>INVESTMENT</div></center>
+                    </div>
+                </a>
+            </div>
+            <div id="music" onmouseenter="addcontent('music')">
+                <a href="https://0422.tistory.com/category/%EB%AC%B8%ED%99%94%2C%20%EC%9D%8C%EC%95%85">
+                    <div id="music_img">
+                        <div>
+                            <center><img src="music.png" width ="92" height="92"></center>
+                        </div>
+                        <center><div>MUSIC&CULTURE</div></center>
+                    </div></a>
+            </div>
+            <div id="etc" onmouseenter="addcontent('etc')">
+                <a href="https://0422.tistory.com/category/%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80">
+                    <div id="etc_img">
+                        <div>
+                            <center><img src="etc.png" width ="92" height="92"></center>
+                        </div>
+                        <center><div>ETC...</div></center>
+                        </div>
+            </a>
+            </div>
+        </div>
+
+
+<div id="content" style="margin-top :30px;">
+
+</div>
+<script>
+    function addcontent(x){
+    if (x=="study"){
+        document.getElementById("content").innerHTML="study입니다.";
+    }else if(x=="music"){
+        document.getElementById("content").innerHTML="music입니다.";
+    }
+    else if(x=="etc"){
+        document.getElementById("content").innerHTML="여러가지입니다.";
+    }
+    else if(x=="stock"){
+        document.getElementById("content").innerHTML="투자관련 글입니다.";
+    }
+    }
+</script>
+        </div>
+    </body>
+</html>
