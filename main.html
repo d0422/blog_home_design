@@ -8,18 +8,19 @@
     </head>
     <body>
         <div id="box">
-            <div id="study" onmouseenter="addcontent('study')">
-                <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80">
+            <div id="header">
+                <div style="font-size: 1vw; margin:0px;">Welcome! 0422's Blog</div>
+                <div></div>
+            </div>
+            <div id="study">
                     <div id="study_img">
                         <div>
                             <center><img src="study.png" width ="100" height="100"></center>
                         </div>
                         <center><div>STUDY</div></center>
                     </div>
-                    
-                </a>
             </div>
-            <div id="stock" onmouseenter="addcontent('stock')">
+            <div id="stock">
                 <a href="https://0422.tistory.com/category/%EC%A3%BC%EC%8B%9D%2C%20%ED%88%AC%EC%9E%90">
                     <div id="stock_img">
                         <div>
@@ -29,7 +30,7 @@
                     </div>
                 </a>
             </div>
-            <div id="music" onmouseenter="addcontent('music')">
+            <div id="music">
                 <a href="https://0422.tistory.com/category/%EB%AC%B8%ED%99%94%2C%20%EC%9D%8C%EC%95%85">
                     <div id="music_img">
                         <div>
@@ -38,7 +39,7 @@
                         <center><div>MUSIC&CULTURE</div></center>
                     </div></a>
             </div>
-            <div id="etc" onmouseenter="addcontent('etc')">
+            <div id="etc">
                 <a href="https://0422.tistory.com/category/%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80">
                     <div id="etc_img">
                         <div>
@@ -48,27 +49,85 @@
                         </div>
             </a>
             </div>
+            <div id="content" style="margin-top :10px;">
+                <div id="if_study">
+                    <div id="algorithm_img">
+                        <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80/algorithm"><div>
+                            <center><img src="algorithm.png" width="100" height="100"></center>
+                        </div>
+                        <div>
+                            <center>ALGORITHM</center>
+                        </div>
+                    </a>
+                    </div>
+                    <div id="django_img">
+                        <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80/django"><div><center><img src="django.png" width="100" height="100"></center></div>
+                        <div><center>DJANGO</center></div>
+                    </a>
+                    </div>
+
+                    <div id="os_img">
+                        <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80/os%2C%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">
+                        <div><center><img src="os.png" width="100" height="100"></center></div>
+                        <div><center>OS&NETWORK</center></div>
+                    </a>
+                    </div>
+                    <div id="book_img">
+                        <a href="https://0422.tistory.com/category/%EA%B3%B5%EB%B6%80/%EB%8F%85%EC%84%9C">
+                        <div><center><img src="book.png" width="100" height="100"></center></div>
+                        <div><center>BOOKS</center></div>
+                    </a>
+                    </div>
+                </div>
+                <div id="if_stock">
+                    <div id="analyze_img">
+                        <a href="https://0422.tistory.com/category/%EC%A3%BC%EC%8B%9D%2C%20%ED%88%AC%EC%9E%90/%EC%A3%BC%EC%8B%9D">
+                        <div>
+                            <center><img src="analyze.png" width="100" height="100"></center>
+                        </div>
+                        <div>
+                            <center>INVESTMENT ARTICLE</center>
+                        </div>
+                    </a>
+                    </div>
+                    <div id="btc_img">
+                        <a href="https://0422.tistory.com/category/%EC%A3%BC%EC%8B%9D%2C%20%ED%88%AC%EC%9E%90/%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90">
+                        <div>
+                            <center><img src="btc.png" width="100" height="100"></center>
+                        </div>
+                        <div>
+                            <center>CRYPTO CURRENCY</center>
+                        </div>
+                    </a>
+                    </div>
+
+                </div>
+                <div id="if_music">
+                    <div id="music_img2">
+                        <a href="https://0422.tistory.com/category/%EB%AC%B8%ED%99%94%2C%20%EC%9D%8C%EC%95%85/%EC%9D%8C%EC%95%85%20%EC%B6%94%EC%B2%9C">
+                        <div>
+                            <center><img src="music_rec.png" width="100" height="100"></center>
+                        </div>
+                        <div>
+                            <center>MUSIC RECOMMAND</center>
+                        </div>
+                    </a>
+                    </div>
+                    <div id="article_img">
+                        <a href="https://0422.tistory.com/category/%EB%AC%B8%ED%99%94%2C%20%EC%9D%8C%EC%95%85/%EC%9D%8C%EC%95%85%20%EA%B4%80%EB%A0%A8%20%EA%B8%80">
+                        <div>
+                            <center><img src="article.png" width="100" height="100"></center>
+                        </div>
+                        <div>
+                            <center>ARTICLE</center>
+                        </div>
+                    </a>
+                    </div>
+            </div>
         </div>
 
+<script type="text/javascript" src="main.js"></script>
 
-<div id="content" style="margin-top :30px;">
-
-</div>
-<script>
-    function addcontent(x){
-    if (x=="study"){
-        document.getElementById("content").innerHTML="study입니다.";
-    }else if(x=="music"){
-        document.getElementById("content").innerHTML="music입니다.";
-    }
-    else if(x=="etc"){
-        document.getElementById("content").innerHTML="여러가지입니다.";
-    }
-    else if(x=="stock"){
-        document.getElementById("content").innerHTML="투자관련 글입니다.";
-    }
-    }
-</script>
         </div>
     </body>
 </html>

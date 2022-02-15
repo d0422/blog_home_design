@@ -1,13 +1,57 @@
+a{
+    text-decoration: none;
+    color: black;
+}
 
+body{
+    font-family: 'Inter', sans-serif;
+    background-color:black;
+    font-size:20px;
+}
+@keyframes appear{
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+@keyframes disappear{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+#clocktext{
+    font-size:6.5vw;
+    font-family:sans-serif;
+    margin-bottom: 3vw;
+}
+#header{
+    grid-area:header;
+    margin-bottom:300px;
+    font-size: 3vw;
+    color:white;
+}
 #box{
     color: black;
-    margin: 0px;
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 45% 35%;
+    grid-row-gap: 1vw;
     width : 65vw;
-    height: 40vh;;
-} 
+    height: 80vh;;
+    grid-template-areas:
+        "header header header header"
+        "study  stock  music  etc"
+        "content content content content";
+}
+
 #study{
+    grid-area:study;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-style:double;
@@ -22,22 +66,31 @@
     background-color: white;
 
 }
+#stock{
+    grid-area:stock;
+    transition : all 0.5s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-style:double;
+    color: black;
+    background-color: white;
+    border-width:15px;
+}
+#music{
+    grid-area:music;
+    transition : all 0.5s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-style:double;
+    color: black;
+    background-color: white;
+    border-width:15px;
+}
 
-#content{
-    color: white;
-    font-size: 10px;
-}
-#stock,#music{
-transition : all 0.5s;
-display:flex;
-justify-content:center;
-align-items:center;
-border-style:double;
-color: black;
-background-color: white;
-border-width:15px;
-}
 #etc{
+    grid-area:etc;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     transition : all 0.5s;
@@ -51,23 +104,38 @@ border-width:15px;
 
 }
 
-body{
-    font-family: 'Inter', sans-serif;
-    background-color:black;
-    font-size:20px;
+#study:hover,#music:hover,#stock:hover,#etc:hover{
+    transform:scale(1.1);
 }
 
-#study:hover,#music:hover,#stock:hover,#etc:hover{
-    transform:scale(1.25);
-}
-a{
-    text-decoration: none;
-    color: black;
-}
 
 #study_img, #stock_img, #music_img, #etc_img{
     transition : all 1.5s;
 }
 #study_img:hover, #stock_img:hover, #music_img:hover, #etc_img:hover{
     transform:rotate(360deg) scale(1.5);
+}
+#content{
+    grid-area:content;
+}
+
+#if_study {
+    display:none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#if_stock, #if_music{
+    display:none;
+    grid-template-columns:  50% 50%;
+}
+#algorithm_img, #django_img, #os_img, #book_img, #analyze_img, #btc_img, #article_img, #music_img2{
+    font-size: 1.5vw;
+    background-color: white;
+    border-style:double;
+    border-width:15px;
+}
+.appear{
+    animation-name:appear;
+    animation-delay:0s;
+    animation-duration: 1.5s;
+    animation-direction:normal;
 }
