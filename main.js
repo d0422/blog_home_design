@@ -40,19 +40,3 @@ etc.addEventListener("mouseover",function(){
 
 })
 
-
-"use strict";
-			
-var textElem = document.getElementById("clocktext");
-
-function updateClock() {
-    var d = new Date();
-    var s = "";
-    s += ((d.getHours() + 11) % 12 + 1) + ":";
-    s += (10 > d.getMinutes() ? "0" : "") + d.getMinutes() + ":";
-    s += (10 > d.getSeconds() ? "0" : "") + d.getSeconds() + "\u00A0";
-    s += d.getHours() >= 12 ? "pm" : "am";
-    textElem.textContent = s;
-    setTimeout(updateClock, 1000 - d.getTime() % 1000 + 20);
-}
-updateClock();

@@ -25,11 +25,6 @@ body{
         opacity:0;
     }
 }
-#clocktext{
-    font-size:6.5vw;
-    font-family:sans-serif;
-    margin-bottom: 3vw;
-}
 #header{
     grid-area:header;
     margin-bottom:300px;
@@ -51,6 +46,7 @@ body{
 }
 
 #study{
+    font-size: 1.7vw;
     grid-area:study;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -67,6 +63,7 @@ body{
 
 }
 #stock{
+    font-size: 1.7vw;
     grid-area:stock;
     transition : all 0.5s;
     display:flex;
@@ -78,6 +75,7 @@ body{
     border-width:15px;
 }
 #music{
+    font-size: 1.7vw;
     grid-area:music;
     transition : all 0.5s;
     display:flex;
@@ -90,6 +88,7 @@ body{
 }
 
 #etc{
+    font-size: 1.7vw;
     grid-area:etc;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -105,15 +104,18 @@ body{
 }
 
 #study:hover,#music:hover,#stock:hover,#etc:hover{
-    transform:scale(1.1);
+    animation-name:motion;
+    animation-delay:0s;
+    animation-duration: 1s;
+    animation-direction:normal;
 }
 
-
-#study_img, #stock_img, #music_img, #etc_img{
-    transition : all 1.5s;
-}
 #study_img:hover, #stock_img:hover, #music_img:hover, #etc_img:hover{
-    transform:rotate(360deg) scale(1.5);
+    animation-name:motion;
+    animation-delay:0s;
+    animation-duration: 1s;
+    animation-direction:normal;
+
 }
 #content{
     grid-area:content;
@@ -121,7 +123,7 @@ body{
 
 #if_study {
     display:none;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 #if_stock, #if_music{
     display:none;
@@ -133,9 +135,21 @@ body{
     border-style:double;
     border-width:15px;
 }
+#algorithm_img:hover, #django_img:hover, #os_img:hover, #book_img:hover, #analyze_img:hover, #btc_img:hover, #article_img:hover, #music_img2:hover{
+    animation-name:motion;
+    animation-delay:0s;
+    animation-duration: 1s;
+    animation-direction:normal;
+}
 .appear{
     animation-name:appear;
     animation-delay:0s;
     animation-duration: 1.5s;
     animation-direction:normal;
+}
+@keyframes motion {
+	0% {margin:0px;}
+	50% {margin :10px;
+    }
+    100%{margin: 0px;}
 }
