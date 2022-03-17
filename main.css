@@ -171,3 +171,6 @@ body{
     width: 3vw;
     margin:0px;
 }
+#github:hover, #instagram:hover{
+	transform:scale(1.1);
+}
