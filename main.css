@@ -31,6 +31,16 @@ body{
     font-size: 3vw;
     color:white;
 }
+#icon{
+    display:flex;
+    border-style:solid;
+    border-width:1vw;
+    border-color: white;
+    width: 6.5vw;
+    height: 3vw;
+    border-radius: 30px;
+    background-color: white;
+}
 #box{
     color: black;
     display:grid;
@@ -40,7 +50,7 @@ body{
     width : 65vw;
     height: 80vh;;
     grid-template-areas:
-        "header header header header"
+        "header header header icon"
         "study  stock  music  etc"
         "content content content content";
 }
@@ -51,7 +61,7 @@ body{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-style:double;
-    border-width:15px;
+    border-width:1.5vw;
     border-color: black;
     transition : all 0.5s;
     display:flex;
@@ -72,7 +82,7 @@ body{
     border-style:double;
     color: black;
     background-color: white;
-    border-width:15px;
+    border-width:1.5vw;
 }
 #music{
     font-size: 1.7vw;
@@ -84,7 +94,7 @@ body{
     border-style:double;
     color: black;
     background-color: white;
-    border-width:15px;
+    border-width:1.5vw;
 }
 
 #etc{
@@ -99,7 +109,7 @@ body{
     border-style:double;
     color: black;
     background-color: white;
-    border-width:15px;
+    border-width:1.5vw;
 
 }
 
@@ -123,19 +133,19 @@ body{
 
 #if_study {
     display:none;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 #if_stock, #if_music{
     display:none;
     grid-template-columns:  50% 50%;
 }
-#algorithm_img, #django_img, #os_img, #book_img, #analyze_img, #btc_img, #article_img, #music_img2{
+#algorithm_img, #django_img, #os_img, #book_img, #analyze_img, #btc_img, #article_img, #music_img2, #db_img{
     font-size: 1.5vw;
     background-color: white;
     border-style:double;
-    border-width:15px;
+    border-width:1.5vw;
 }
-#algorithm_img:hover, #django_img:hover, #os_img:hover, #book_img:hover, #analyze_img:hover, #btc_img:hover, #article_img:hover, #music_img2:hover{
+#algorithm_img:hover, #django_img:hover, #os_img:hover, #book_img:hover, #analyze_img:hover, #btc_img:hover, #article_img:hover, #music_img2:hover, #db_img:hover{
     animation-name:motion;
     animation-delay:0s;
     animation-duration: 1s;
@@ -152,4 +162,12 @@ body{
 	50% {margin :10px;
     }
     100%{margin: 0px;}
+}
+#github, #instagram{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 3vw;
+    width: 3vw;
+    margin:0px;
 }
